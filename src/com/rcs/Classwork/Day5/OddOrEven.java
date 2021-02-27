@@ -12,9 +12,9 @@ public class OddOrEven {
         read.close();
 
         if ( number % 2 == 0) {
-            System.out.println(String.format("Jūsu skaitlis %s ir pāra skaitlis", String.valueOf(number)));
+            System.out.printf("Jūsu skaitlis %s ir pāra skaitlis%n", number);
         } else {
-            System.out.println(String.format("Jūsu skaitlis %s ir nepāra skaitlis", String.valueOf(number)));
+            System.out.printf("Jūsu skaitlis %s ir nepāra skaitlis%n", number);
         }
     }
 }
