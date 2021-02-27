@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CheckPassFail {
 
     public static void main(String[] args) {
+        System.out.println("Uzdevums 1");
 	    System.out.print("Lūdzu, ievadiet savu atzīmi (0-100): ");
         Scanner read = new Scanner(System.in);
         int mark = read.nextInt();
