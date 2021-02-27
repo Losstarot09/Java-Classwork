@@ -13,7 +13,7 @@ public class WeirOrNot {
 
         if ((number % 2 != 0) || (number >= 6 && number <= 20)) {
             System.out.println("Dīvaini...");
-        } else if ((number >= 2 && number <= 5) || number > 20) {
+        } else  {
             System.out.println("Nav dīvaini");
         }
     }
