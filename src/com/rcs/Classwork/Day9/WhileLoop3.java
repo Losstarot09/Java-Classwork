@@ -12,6 +12,7 @@ public class WhileLoop3 {
         int i = 1;
         do {
             System.out.printf("%d * %d = %d%n", number, i, number * i++);
-        } while (i <= number);
+        }
+        while (i <= number);
     }
 }

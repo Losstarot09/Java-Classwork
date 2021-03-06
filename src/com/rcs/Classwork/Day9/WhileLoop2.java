@@ -12,6 +12,7 @@ public class WhileLoop2 {
         int i = 0;
         do {
             System.out.println(text.toUpperCase().charAt(i++));
-        } while (i < text.length());
+        }
+        while (i < text.length());
     }
 }
