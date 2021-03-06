@@ -18,7 +18,7 @@ public class GuessTheNumber {
             if (userNumber != goalNumber) {
                 System.out.println("Nepareizi, meiģiniet velreizs!");
             } else {
-                System.out.println("Pareizi!");
+                System.out.println("Pareizi! Tu uzminēji: " + goalNumber);
                 read.close();
                 break;
             }
