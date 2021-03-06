@@ -2,7 +2,7 @@ package com.rcs.Classwork.Day9;
 
 import java.util.Scanner;
 
-public class WhileLoop3 {
+public class DoWhileLoop3 {
     public static void main(String[] args) {
         System.out.println("Uzdevums 3");
         System.out.print("Lūdzu ievadiet veselo skaitļi, kas ir lielaks par 0: ");

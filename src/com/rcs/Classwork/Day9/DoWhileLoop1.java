@@ -1,6 +1,6 @@
 package com.rcs.Classwork.Day9;
 
-public class WhileLoop1 {
+public class DoWhileLoop1 {
 
     public static void main(String[] args) {
         System.out.println("Uzdevums 1");
