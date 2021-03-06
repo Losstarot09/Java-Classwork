@@ -10,7 +10,6 @@ public class WhileLoop1 {
             System.out.println(++i);
             summa += i;
             System.out.printf("Summa no 1 līdz %d ir %d%n", i, summa);
-
         }
         while (i < 10);
     }
