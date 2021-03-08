@@ -10,7 +10,7 @@ public class ReverseArray {
         int[] numberArray =new int[10];
         Random rand = new Random();
         for (int i = 0; i < numberArray.length; i++) {
-            numberArray[i] = rand.nextInt(10) + 1;
+            numberArray[i] = rand.nextInt(31) + 20;
         }
         System.out.println(Arrays.toString(numberArray));
         for (int i = 0; i < (numberArray.length / 2); i++) {
