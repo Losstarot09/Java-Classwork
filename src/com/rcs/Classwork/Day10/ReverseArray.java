@@ -2,12 +2,16 @@ package com.rcs.Classwork.Day10;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class ReverseArray {
 
     public static void main(String[] args) {
         System.out.println("Uzdevums 2");
-        int[] numberArray =new int[10];
+        Scanner read = new Scanner(System.in);
+        System.out.print("Lūdzu, ievadiet masīva izmeru: ");
+        int size = read.nextInt();
+        int[] numberArray =new int[size];
         Random rand = new Random();
         for (int i = 0; i < numberArray.length; i++) {
             numberArray[i] = rand.nextInt(31) + 20;
