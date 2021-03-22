@@ -14,11 +14,20 @@ public class ReplaceListItems {
 
         for (int i = 0; i < size; i++) {
             numberList.add(rnd.nextInt(101));
+            System.out.printf("%3d", numberList.get(i));
+            if ( i != size - 1) {
+                System.out.print("; ");
+            } else {
+                System.out.println();
+            }
+        }
+
+        for (int i = 0; i < size; i++) {
             if (numberList.get(i) <= 39) {
                 numberList.set(i, 0);
             }
             System.out.printf("%3d", numberList.get(i));
-            if ( i != size) {
+            if ( i != size - 1) {
                 System.out.print("; ");
             } else {
                 System.out.println();
