@@ -8,6 +8,7 @@ public class ToDoList {
 
     public static void main(String[] args) {
 
+        System.out.println("Uzdevums 1");
         List<String> toDoItems= new ArrayList<>();
         Scanner read = new Scanner(System.in);
         String item;
