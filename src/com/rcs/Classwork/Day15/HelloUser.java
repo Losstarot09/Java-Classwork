@@ -13,6 +13,7 @@ public class HelloUser {
         System.out.print("Lūdzu ievadiet sāvu vardu: ");
         Scanner read = new Scanner(System.in);
         String name = read.nextLine();
+        read.close();
         sayHello(name);
     }
 }
