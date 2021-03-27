@@ -22,4 +22,8 @@ public class StringUtils {
 
         return reverseText;
     }
+
+    public static boolean isPalindrome(String text) {
+        return text.equals(getReverse(text));
+    }
 }
