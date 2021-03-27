@@ -13,5 +13,7 @@ public class StringTasks {
         String text = read.nextLine();
         read.close();
         System.out.println("Teksta vidū ir: " + StringUtils.getMiddle(text));
+        System.out.println("Uzdevums 2");
+        System.out.println("Teksta reversā veida ir: " + StringUtils.getReverse(text));
     }
 }
