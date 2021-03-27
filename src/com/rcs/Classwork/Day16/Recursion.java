@@ -14,7 +14,7 @@ public class Recursion {
         do {
             System.out.print("Lūdzu, ievadiet veselo skaitļi: ");
             n = read.nextInt();
-        } while (n <= 0);
+        } while (n < 0);
         read.close();
         System.out.printf("%d! = %d%n", n, factorial(n));
     }
