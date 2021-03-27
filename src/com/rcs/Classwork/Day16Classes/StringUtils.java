@@ -24,6 +24,6 @@ public class StringUtils {
     }
 
     public static boolean isPalindrome(String text) {
-        return text.equals(getReverse(text));
+        return text.equalsIgnoreCase(getReverse(text));
     }
 }
