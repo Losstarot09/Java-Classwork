@@ -3,12 +3,13 @@ package com.rcs.Classwork.Day17;
 
 
 public class Circle {
+    static final double pi = 3.14159265;
+    static final String defaultColor = "Black";
     String color;
     double radius;
-    static final double pi = 3.14159265;
 
     public Circle(double radius) {
-        this.color = "Black";
+        this.color = defaultColor;
         this.radius = radius;
     }
 
