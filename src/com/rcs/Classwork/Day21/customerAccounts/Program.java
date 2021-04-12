@@ -53,17 +53,11 @@ public class Program {
 
         displayAccount(accountList);
 
-        for (int i = 0; i < accountList.get(accountList.size()-1).getId(); i++) {
-            accountList.get(i).deposit(10);
-        }
-
-        for (int i = 0; i < accountList.get(accountList.size()-1).getId(); i++) {
-            accountList.get(i).withdraw(19.99);
-        }
-
-        for (int i = 0; i < accountList.get(accountList.size()-1).getId(); i++) {
-            if (accountList.get(i).getId() == 1) {
-                accountList.get(i).deposit(50);
+        for (Account account : accountList) {
+            account.deposit(10);
+            account.withdraw(19.99);
+            if (account.getId() == 1) {
+                account.deposit(50);
             }
         }
 
