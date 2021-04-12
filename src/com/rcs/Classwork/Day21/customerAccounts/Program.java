@@ -1,31 +1,24 @@
 package com.rcs.Classwork.Day21.customerAccounts;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import com.rcs.Classwork.Day21.customerAccounts.HelperClasses.AccountStorage;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Program {
-    public static void main(String[] args) {
+    private final static String fileName = "Accounts";
 
-        List<Account> accountList = new ArrayList<>();
-        try {
-            FileInputStream inputStream = new FileInputStream("accounts");
-            ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
-            //noinspection rawtypes
-            accountList = (ArrayList)objectInputStream.readObject();
-            inputStream.close();
-            objectInputStream.close();
-
-
-        } catch (Exception ex){
-           // ex.printStackTrace();
+    private static void displayAccount(List<Account> accounts){
+        for (Account account : accounts) {
+            System.out.println(account);
         }
+    }
 
+    public static void main(String[] args) {
+        List<Account> accountList = AccountStorage.readFromFile(fileName);
+
+        displayAccount(accountList);
         System.out.println("Veiciet kontu ievadi");
         Scanner read = new Scanner(System.in);
         int id = 1;
@@ -58,49 +51,23 @@ public class Program {
         }
         read.close();
 
-        for (Account account : accountList) {
-            System.out.println(account);
+        displayAccount(accountList);
+
+        for (int i = 0; i < accountList.get(accountList.size()-1).getId(); i++) {
+            accountList.get(i).deposit(10);
         }
 
-        try {
-            FileOutputStream fileStream = new FileOutputStream("accounts");
-            ObjectOutputStream objectStream = new ObjectOutputStream(fileStream);
-            objectStream.writeObject(accountList);
-            fileStream.close();
-            objectStream.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        for (int i = 0; i < accountList.get(accountList.size()-1).getId(); i++) {
+            accountList.get(i).withdraw(19.99);
         }
 
-        /*Customer klients1 = new Customer(1, "Kristabs", "Krumins",
-                LocalDate.of(1995, 4, 1));*/
-        /*System.out.println(klients.getId());
-        System.out.println(klients.getName());
-        System.out.println(klients.getSurname());
-        System.out.println(klients.getDateOfBirth());
-        System.out.println(klients.);*/
-        /*Account konts1 = new Account(
-                1,
-                "LV84UNLA0000000001",
-                klients1);
+        for (int i = 0; i < accountList.get(accountList.size()-1).getId(); i++) {
+            if (accountList.get(i).getId() == 1) {
+                accountList.get(i).deposit(50);
+            }
+        }
 
-        Account konts2 = new Account(
-                2,
-                "LV84UNLA0000000002",
-                new Customer(
-                        2,
-                        "Zane",
-                        "Liepiņa",
-                        LocalDate.of(1980, 1, 11)),
-                110.10);
-*/
-        /*System.out.println(konts1);
-        System.out.println(konts2);
-        konts1.deposit(999.99);
-        konts2.withdraw(100);
-        System.out.println(konts1);
-        System.out.println(konts2);
-        klients1.setSurname("Kalniņš");
-        System.out.println(konts1);*/
+        displayAccount(accountList);
+        AccountStorage.saveToFile(accountList, fileName);
     }
 }
