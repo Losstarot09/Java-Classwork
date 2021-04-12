@@ -26,15 +26,15 @@ public class Program {
             id = accountList.get(accountList.size() - 1).getId() + 1;
         }
         while (true) {
-            System.out.println("IBAN: ");
+            System.out.print("IBAN: ");
             String IBAN = read.nextLine();
-            System.out.println("Name: ");
+            System.out.print("Name: ");
             String name = read.nextLine();
-            System.out.println("Surname: ");
+            System.out.print("Surname: ");
             String surname = read.nextLine();
-            System.out.println("Date of birth (YYYY-MM-DD): ");
+            System.out.print("Date of birth (YYYY-MM-DD): ");
             String date = read.nextLine();
-            System.out.println("Balance: ");
+            System.out.print("Balance: ");
             double balance = read.nextDouble();
             read.nextLine();
 
@@ -59,9 +59,9 @@ public class Program {
             if (account.getId() == 1) {
                 account.deposit(50);
             }
+            System.out.println(account);
         }
 
-        displayAccount(accountList);
         AccountStorage.saveToFile(accountList, fileName);
     }
 }
